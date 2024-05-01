@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
-import './indexCopy.css';
+import './index.css';
 import Login from './pages/login.tsx';
 import Cadastrar from './pages/cadastrar.tsx';
-import Error from './pages/Error/error.tsx'
+import Forgot_password from './components/esqueceu_senha.tsx';
+import Error from './pages/Error/error.tsx';
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
@@ -16,10 +17,13 @@ const router = createBrowserRouter([
     path: "/login", element: <Login />
   },
   {
-    path:"/cadastrar", element: <Cadastrar/>
+    path: "/cadastrar", element: <Cadastrar />
   },
   {
-    path:"/*", element: <Error/>
+    path: "/esqueceu-senha", element: <Forgot_password />
+  },
+  {
+    path: "/*", element: <Error />
   }
 ]);
 

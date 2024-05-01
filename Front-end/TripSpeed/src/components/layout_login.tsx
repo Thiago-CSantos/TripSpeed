@@ -1,5 +1,4 @@
 import React from "react";
-import amico from "../assets/laoyout-ilustration.svg";
 import delivre from "../assets/teste.svg";
 import logo from "../assets/logo-editor.svg";
 
@@ -11,9 +10,10 @@ interface LayoutPorps {
       primaryButton: string;
       secondaryButton: string;
       formulario: React.ReactNode;
+      rotaVoltar: string;
 }
 
-const LayoutLogin: React.FC<LayoutPorps> = ({ title, primaryButton, secondaryButton, formulario }) => {
+const LayoutLogin: React.FC<LayoutPorps> = ({ title, primaryButton, secondaryButton, formulario, rotaVoltar }) => {
 
 
       return (
@@ -24,18 +24,18 @@ const LayoutLogin: React.FC<LayoutPorps> = ({ title, primaryButton, secondaryBut
                               <h2>{title}</h2>
                               {formulario}
                               <div className="btn-wrapper">
-                                    <button className="btn-primary">{primaryButton}</button>
+                                    <button className="btn-primary" type="submit">{primaryButton}</button>
                                     <div className="divider">
                                           <div></div>
                                           <span>ou</span>
                                           <div></div>
                                     </div>
-                                    <Link to={'/cadastrar'} style={{width: '100%'}}><button className="btn-secondary">{secondaryButton}</button></Link>
+                                    <Link to={rotaVoltar} style={{width: '100%'}}><button className="btn-secondary">{secondaryButton}</button></Link>
                               </div>
                         </section>
                         <section className="main-section">
-                              <h2>You Should, moveIt</h2>
-                              <img src={delivre} alt="ilustrations" width={597} height={534}/>
+                              <h2 style={{textAlign: 'center'}}>TripSpeed, <br />Gestão Inteligente de Despesas,<br />Viagens Corporativas</h2>
+                              <img className="hidde-image" src={delivre} alt="ilustrations" width={597} height={534}/>
                         </section>
                   </main>
             </>

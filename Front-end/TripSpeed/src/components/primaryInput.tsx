@@ -20,9 +20,9 @@ const PrimaryInput: React.FC<Types> = ({ inputType, placeHolder, nameForm, textL
             <div className="input-wrapper">
                   <label htmlFor={nameForm}>{textLabel}</label>
                   <div className="input-content">
-                        <input type={inputType} name={nameForm} placeholder={placeHolder} />
+                        <input className='style-input' type={inputType} name={nameForm} placeholder={placeHolder} required/>
                         <div className="icon">
-                              <img src={icon} alt="email-icon" width={20}/>
+                              <img src={icon} alt="email-icon" width={20} />
                         </div>
                   </div>
             </div>

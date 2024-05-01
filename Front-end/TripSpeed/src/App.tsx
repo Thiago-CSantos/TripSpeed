@@ -1,11 +1,11 @@
-import LayoutLogin from './components/layout_login';
+import { Link } from "react-router-dom";
 
 export default function App() {
 
 
   return (
     <>
-      <h1>App tsx</h1>
+      <Link to={"/login"} ><h1>Clique aqui</h1></Link>
     </>
   )
 }
